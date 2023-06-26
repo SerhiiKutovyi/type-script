@@ -1,0 +1,24 @@
+{
+  "name": "type-script",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "Lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^5.1.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-vue": "^9.15.0"
+  }
+}
