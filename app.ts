@@ -110,9 +110,9 @@ empty = null;
 let notInitialize: undefined;
 notInitialize = undefined;
 
-let callback = (a: number) => {
-  return 100 + a;
-};
+let callback: (a: number) => number;
+callback = (a) => { return 100 + a };
+
 
 //-----------------------------------------------------------
 
@@ -146,15 +146,16 @@ enum Loader {
 }
 
 const service = {
-  loading: Loader.LOADING,
-  ready: Loader.READY,
+  loading: Loader.READY,
 };
 
 if (service.loading === Loader.LOADING) {
   console.log('LOADING',Loader.LOADING);
-} else {
-  console.log('READY');
-}
+} 
+if (service.loading === Loader.READY) {
+  console.log('LOADING',Loader.READY);
+} 
+
 
 //-----------------------------------------------------------------------------
 
@@ -163,7 +164,7 @@ let union: string | number;
 let data: 'enable' | 'disable'
 
 //--------------------------------------------------------------------------
-const showMessage = (message): void => {
+const showMessage = (message:string): void => {
     console.log(message);
 };
 
@@ -171,7 +172,7 @@ const calc = (num1:number, num2:number):number =>{
     return num1+num2
 }
 
-function customError():undefined {
+function customError():never {
     throw new Error("Error");
     
 }
