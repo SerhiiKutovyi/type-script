@@ -1,52 +1,126 @@
-class Bmv_5 {
-  private needRepair = false;
-  private maxEngineLoad = 3;
+// class Key {
+//   private signature: number;
 
-  /**
-   * ?Заводит двигатель машины если это возможно
-   */
+//   constructor() {
+//     this.signature = Math.random();
+//   }
 
-  private checkEngine() {
-    if (this.needRepair) {
-      throw new Error('Engine not work');
-    }
+//   getSignature(): number {
+//     return this.signature;
+//   }
+// }
 
-    //Пробуем его завести
+// class Person {
+//   constructor(private key: Key) {}
+//   getKey(): Key {
+//     return this.key;
+//   }
+// }
 
-    const engineLoad = Math.floor(Math.random() * this.maxEngineLoad) + 1;
-    if (this.maxEngineLoad === engineLoad) {
-      this.needRepair = true;
-      throw new Error('Engine broken again');
-    }
-  }
-  /**
-   * ?Завести двигатель
-   */
+// abstract class House {
+//   protected door = false;
+//   private tenants: Person[] = [];
+//   constructor(protected key: Key) {}
 
-  public startEngine() {
-    this.checkEngine();
-    console.log('Ta-ta-ta-ta');
-  }
+//   comeIn(person: Person): void {
+//     if (!this.door) {
+//       throw new Error('Door is close');
+//     }
 
-  /**
-   * Ремонт двигателя
-   */
-  public repairEngine() {
-    this.needRepair = false;
+//     this.tenants.push(person);
+//     console.log('Person inside');
+//   }
 
-    console.log('Engine rebuilt');
-  }
-}
+//   abstract openDoor(key: Key): boolean;
+// }
 
-const auto = new Bmv_5();
+// class MyHouse extends House {
+//   openDoor(key: Key) {
+//     if (key.getSignature() !== this.key.getSignature()) {
+//       throw new Error('Key to another door');
+//     }
 
-try {
-  auto.startEngine();
-  auto.startEngine();
-  auto.startEngine();
-  auto.startEngine();
-} catch (error) {
-  console.log(error);
-  auto.repairEngine();
-  auto.startEngine();
-}
+//     return (this.door = true);
+//   }
+// }
+
+// const key = new Key();
+
+// const house = new MyHouse(key);
+// const person = new Person(key);
+
+// house.openDoor(person.getKey());
+
+// house.comeIn(person);
+
+// type Admin = {
+//   name: string;
+//   privileges: string[];
+// };
+
+// type Employee = {
+//   name: string;
+//   startDate: Date;
+//   eig: number;
+// }
+
+// type AdminEmployee = extends: Admin,Employee
+
+// const e1: AdminEmployee = {
+//   name: 'Max',
+//   privileges: ['Supermen'],
+//   startDate: new Date(),
+//   eig: 23
+
+// };
+
+// console.log(e1);
+
+// interface Admin {
+//   name: string;
+//   privileges: string[];
+// }
+
+// interface Employee {
+//   name: string;
+//   startDate: Date;
+// }
+
+// type ElevatedEmployee = Admin & Employee;
+
+// type Admin = {
+//   name: string;
+//   privileges: string[];
+// };
+
+// const admin: Admin = {
+//   name: 'Max',
+//   privileges:['Supermen','X-men'],
+// };
+  
+
+// type Employee = {
+//   name: string;
+//   startDate: Date;
+// };
+
+// const empl: Employee = {
+//   name: 'Yan',
+//   startDate: new Date(),
+// };
+
+// type UnknownObject = Employee | Admin;
+
+// function showFields(e1: UnknownObject) {
+//   console.log(e1.name);
+//   if ('privileges' in e1) {
+//     console.log(e1.privileges);
+//   }
+//   if ('startDate' in e1) {
+//     console.log(e1.startDate);
+//   }
+// }
+
+// showFields(admin);
+// showFields(empl);
+
