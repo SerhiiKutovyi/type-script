@@ -97,7 +97,6 @@
 // //   name: 'Max',
 // //   privileges:['Supermen','X-men'],
 // // };
-  
 
 // // type Employee = {
 // //   name: string;
@@ -127,7 +126,7 @@
 // class Car {
 //     drive() {
 //         console.log('Driving...');
-        
+
 //     }
 // }
 
@@ -137,7 +136,7 @@
 //     }
 //     loadCargo(amount: number) {
 //         console.log('Loading cargo ... ' + amount);
-        
+
 //     }
 // }
 
@@ -155,13 +154,35 @@
 // useVehicle(v1);
 // useVehicle(v2);
 
-function getPromise(): Promise<[string,number]>  {
-    return new Promise(resolve => {
-      resolve(['Generic', 50]);
-    });
+function getPromise(): Promise<Array<string | number>> {
+  return new Promise(resolve => {
+    resolve(['Generic', 50]);
+  });
 }
 
-getPromise().then((data) => {
-    console.log(data);
-    
+getPromise().then(data => {
+  console.log(data);
 });
+
+type AllType = {
+  name: string;
+  position: number;
+  color: string;
+  weight: number;
+};
+
+function compare(
+  top: Pick<AllType, 'name' | 'color'>,
+  bottom: Pick<AllType, 'position' | 'weight'>
+): AllType {
+  return {
+    name: top.name,
+    color: top.color,
+    position: bottom.position,
+    weight: bottom.weight,
+  };
+}
+
+function merge<T extends object, U extends object>(objA: T, objB: U) {
+  return Object.assign(objA, objB);
+}
