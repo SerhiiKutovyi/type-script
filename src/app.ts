@@ -154,35 +154,68 @@
 // useVehicle(v1);
 // useVehicle(v2);
 
-function getPromise(): Promise<Array<string | number>> {
-  return new Promise(resolve => {
-    resolve(['Generic', 50]);
-  });
+// function getPromise(): Promise<Array<string | number>> {
+//   return new Promise(resolve => {
+//     resolve(['Generic', 50]);
+//   });
+// }
+
+// getPromise().then(data => {
+//   console.log(data);
+// });
+
+// type AllType = {
+//   name: string;
+//   siname: string;
+//   position: number;
+//   color: string;
+//   weight: number;
+// };
+
+// function compare(
+//   top: Pick<AllType, 'name' | 'siname'|'color'>,
+//   bottom: Pick<AllType, 'position' | 'weight'>
+// ): AllType {
+//   return {
+//     name: top.name,
+//     color: top.color,
+//     siname: top.siname,
+//     position: bottom.position,
+//     weight: bottom.weight,
+//   };
+// }
+
+// const topObject = { name: 'Предмет A',color:'red', siname: 'qweqwe' };
+// const bottomObject = { position: 1, weight: 10 };
+
+// console.log(compare(topObject, bottomObject));
+
+//----------------------------------------------------------------------------
+
+// const objA = { name: 'qwewe' };
+// const objB = { age: 23 };
+
+// function merge<T extends object, U extends object>(objA: T, objB: U) {
+//   return Object.assign(objA, objB);
+// }
+
+// console.log(merge(objA, objB));
+
+//----------------------------------------------------------------------
+
+class Component<T> {
+  constructor(public props: T) {
+    
+  }
 }
 
-getPromise().then(data => {
-  console.log(data);
-});
-
-type AllType = {
-  name: string;
-  position: number;
-  color: string;
-  weight: number;
-};
-
-function compare(
-  top: Pick<AllType, 'name' | 'color'>,
-  bottom: Pick<AllType, 'position' | 'weight'>
-): AllType {
-  return {
-    name: top.name,
-    color: top.color,
-    position: bottom.position,
-    weight: bottom.weight,
-  };
+interface IProps {
+  title:string;
 }
 
-function merge<T extends object, U extends object>(objA: T, objB: U) {
-  return Object.assign(objA, objB);
+class Page extends Component<IProps> {
+  pageInfo() {
+    console.log(this.props.title);
+  }
 }
+
