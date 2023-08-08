@@ -203,19 +203,42 @@
 
 //----------------------------------------------------------------------
 
-class Component<T> {
-  constructor(public props: T) {
-    
-  }
+// class Component<T> {
+//   constructor(public props: T) {
+
+//   }
+// }
+
+// interface IProps {
+//   title:string;
+// }
+
+// class Page extends Component<IProps> {
+//   pageInfo() {
+//     console.log(this.props.title);
+//   }
+// }
+
+//==================================================================
+
+// function repeat(text: string, count: number) {
+//   let result = '';
+//   for (let i = 0; i < count; i += 1) {
+//     result += text;
+//   }
+//   return result;
+// }
+
+// console.log(repeat('hexlet', 2));
+// console.log(repeat('wo', 3));
+
+//===================================================================
+
+function getHiddenCard(card: string, count?: number) {
+  console.log(card, count);
 }
 
-interface IProps {
-  title:string;
-}
-
-class Page extends Component<IProps> {
-  pageInfo() {
-    console.log(this.props.title);
-  }
-}
-
+getHiddenCard('1234567812345678', 2);
+getHiddenCard('1234567812345678', 3);
+getHiddenCard('1234567812345678');
+getHiddenCard('2034399002121100', 1);
