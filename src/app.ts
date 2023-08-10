@@ -234,11 +234,15 @@
 
 //===================================================================
 
-function getHiddenCard(card: string, count?: number) {
-  console.log(card, count);
+function getHiddenCard(card: string,count: number ) {
+  const visiblePart = card.slice(0).replace(/\d/g, '*'); 
+  const hiddenPart = card.slice(-count); 
+  return visiblePart + hiddenPart;
+  
+  
 }
 
-getHiddenCard('1234567812345678', 2);
-getHiddenCard('1234567812345678', 3);
-getHiddenCard('1234567812345678');
-getHiddenCard('2034399002121100', 1);
+console.log(getHiddenCard('1234567812345678', 2));
+// getHiddenCard('1234567812345678', 3);
+// getHiddenCard('1234567812345678');
+// getHiddenCard('2034399002121100', 1);
