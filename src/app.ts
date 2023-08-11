@@ -234,15 +234,30 @@
 
 //===================================================================
 
-function getHiddenCard(card: string,count: number ) {
-  const visiblePart = card.slice(0).replace(/\d/g, '*'); 
-  const hiddenPart = card.slice(-count); 
-  return visiblePart + hiddenPart;
+// function getHiddenCard(card: string, count?: number): string | number {
+//   const visiblePart = '*'.repeat(4);
+//   const hiddenPart = card.slice(-4);
+ 
   
-  
-}
+//   if (count !== undefined) {
+//    return '*'.repeat(count) + hiddenPart;
+//   }
+//   return visiblePart + hiddenPart;
+// }
 
-console.log(getHiddenCard('1234567812345678', 2));
-// getHiddenCard('1234567812345678', 3);
-// getHiddenCard('1234567812345678');
-// getHiddenCard('2034399002121100', 1);
+// console.log(getHiddenCard('123456789', 2));
+// console.log(getHiddenCard('1234567812345678', 3));
+// console.log(getHiddenCard('1234567812345678'));
+// console.log(getHiddenCard('2034399002121100', 1));
+
+// 2 test =================================================================
+
+// function getHiddenCard(cardNumber: string, count = 4):string {
+//   const visiblePart = cardNumber.slice(-4) ;
+//   return visiblePart.padStart(count+4, '*');
+// }
+
+// console.log(getHiddenCard('123456789', 2));
+// console.log(getHiddenCard('1234567812345678', 3));
+// console.log(getHiddenCard('1234567812345678'));
+// console.log(getHiddenCard('2034399002121100', 1));
