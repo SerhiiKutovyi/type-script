@@ -237,8 +237,7 @@
 // function getHiddenCard(card: string, count?: number): string | number {
 //   const visiblePart = '*'.repeat(4);
 //   const hiddenPart = card.slice(-4);
- 
-  
+
 //   if (count !== undefined) {
 //    return '*'.repeat(count) + hiddenPart;
 //   }
@@ -261,3 +260,16 @@
 // console.log(getHiddenCard('1234567812345678', 3));
 // console.log(getHiddenCard('1234567812345678'));
 // console.log(getHiddenCard('2034399002121100', 1));
+
+//===================================================================
+
+// const numbers = [1, 3, 8, 9, 100, 23, 55, 34];
+
+// const getEvenNumbers = (numbers: number[]) =>
+//   numbers.filter(data => data % 2 === 0);
+
+// console.log(getEvenNumbers(numbers));
+
+//===================================================================
+
+
