@@ -270,6 +270,15 @@
 
 // console.log(getEvenNumbers(numbers));
 
-//===================================================================
+//================================Anagrams===================================
 
+// function filterAnagrams(text: string, anagrams: string[]) {
+//   const standard = text.split('').sort().join('');
+//   console.log(standard);
 
+//   return anagrams.filter(data => data.split('').sort().join('') === standard);
+// }
+
+// console.log(filterAnagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
+
+//=============================================================================
