@@ -281,4 +281,20 @@
 
 // console.log(filterAnagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
 
-//=============================================================================
+//============================================================================
+function filterAnagrams(anagram: string, anagrams: string[]) {
+    
+    const data = anagram.split('').sort().join('');
+    console.log(data);
+    
+   
+    
+    return anagrams.map(
+      element => element.split('').sort().join('')
+    );
+    
+}
+
+console.log(
+  filterAnagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])
+);
