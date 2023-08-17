@@ -281,20 +281,19 @@
 
 // console.log(filterAnagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
 
-//============================================================================
-function filterAnagrams(anagram: string, anagrams: string[]) {
-    
-    const data = anagram.split('').sort().join('');
-    console.log(data);
-    
-   
-    
-    return anagrams.map(
-      element => element.split('').sort().join('')
-    );
-    
-}
+//==========================================================================
+const course = {
+  name: 'Java',
+  lessons: ['variables', 'functions', 'conditions'],
+};
 
-console.log(
-  filterAnagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])
-);
+const isComplete = (course: { name: string; lessons: string[] }):boolean => {
+  // for (let i = 0; i < course.lessons.length; i += 1) {
+  //   if (course.lessons.length <= 3) {
+  //     return false;
+  //   }
+  // }
+  return course.lessons.length >= 4;
+};
+
+console.log(isComplete(course));
