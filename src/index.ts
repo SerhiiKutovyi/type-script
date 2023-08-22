@@ -282,18 +282,30 @@
 // console.log(filterAnagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
 
 //==========================================================================
-const course = {
-  name: 'Java',
-  lessons: ['variables', 'functions', 'conditions'],
-};
+// const course = {
+//   name: 'Java',
+//   lessons: ['variables', 'functions', 'conditions'],
+// };
 
-const isComplete = (course: { name: string; lessons: string[] }):boolean => {
-  // for (let i = 0; i < course.lessons.length; i += 1) {
-  //   if (course.lessons.length <= 3) {
-  //     return false;
-  //   }
-  // }
-  return course.lessons.length >= 4;
-};
+// const isComplete = (course: { name: string; lessons: string[] }):boolean => {
+//   // for (let i = 0; i < course.lessons.length; i += 1) {
+//   //   if (course.lessons.length <= 3) {
+//   //     return false;
+//   //   }
+//   // }
+//   return course.lessons.length >= 4;
+// };
 
-console.log(isComplete(course));
+// console.log(isComplete(course));
+// ======================================================================
+
+import concatenation from "./concatenation";
+
+const button = document.querySelector('button');
+const input = document.querySelector('input');
+
+if (button && input) {
+  button.addEventListener('click', () => {
+    concatenation(input.value,'hello!');
+  })
+}
