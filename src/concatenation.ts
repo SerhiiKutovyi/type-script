@@ -1,6 +1,5 @@
-function concatenation(firstWord: string, secondWorld: string) {
-    console.log(`${firstWord} ${secondWorld}`);
+// function concatenation(firstWord: string, secondWorld: string) {
+//   console.log(`${firstWord} ${secondWorld}`);
+// }
 
-}
-
-export  default concatenation;
+// export default concatenation;

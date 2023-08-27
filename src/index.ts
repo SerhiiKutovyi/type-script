@@ -299,13 +299,22 @@
 // console.log(isComplete(course));
 // ======================================================================
 
-import concatenation from "./concatenation";
+// import concatenation from "./concatenation";
 
-const button = document.querySelector('button');
-const input = document.querySelector('input');
+// const button = document.querySelector('button');
+// const input = document.querySelector('input');
 
-if (button && input) {
-  button.addEventListener('click', () => {
-    concatenation(input.value,'hello!');
-  })
+// if (button && input) {
+//   button.addEventListener('click', () => {
+//     concatenation(input.value,'hello!');
+//   })
+// }
+
+function fetchUserData() {
+  return 'Tom';
+}
+
+const userData: unknown = fetchUserData(); // fetchUserData повертає невідомі дані
+if (typeof userData === 'string') {
+  console.log(userData.toUpperCase()); // OK, тепер ми знаємо, що це рядок
 }
