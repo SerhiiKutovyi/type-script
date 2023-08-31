@@ -310,11 +310,45 @@
 //   })
 // }
 
-function fetchUserData() {
-  return 'Tom';
-}
+// function fetchUserData() {
+//   return 'Tom';
+// }
 
-const userData: unknown = fetchUserData(); // fetchUserData повертає невідомі дані
-if (typeof userData === 'string') {
-  console.log(userData.toUpperCase()); // OK, тепер ми знаємо, що це рядок
-}
+// const userData: unknown = fetchUserData(); // fetchUserData повертає невідомі дані
+// if (typeof userData === 'string') {
+//   console.log(userData.toUpperCase()); // OK, тепер ми знаємо, що це рядок
+// }
+//======================================================================
+// console.log(fetchUserData());
+
+// type User = {
+//   id: number;
+//   name: string;
+// };
+
+// const getUserNames = (users: User[]): number[] => {
+//   return users.map(data => data.id);
+// };
+
+// const users: User[] = [
+//   { id: 1, name: 'Yan' },
+//   { id: 2, name: 'Vas' },
+//   { id: 3, name: 'Ya' },
+// ];
+
+// console.log(getUserNames(users));
+
+// function logMessage(message: string): void {
+//   console.log(message);
+// }
+
+// logMessage('Hello,world!');
+
+let myFunc: (firstArg: string, secondArg: number) => void;
+
+// eslint-disable-next-line prefer-const
+myFunc = (first: string, second: number) => {
+  console.log(`First: ${first}, Second: ${second}`);
+};
+
+myFunc('Hello', 42);
