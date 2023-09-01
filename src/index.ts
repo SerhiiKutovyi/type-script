@@ -344,11 +344,91 @@
 
 // logMessage('Hello,world!');
 
-let myFunc: (firstArg: string, secondArg: number) => void;
+// let myFunc: (firstArg: string, secondArg: number) => void;
 
-// eslint-disable-next-line prefer-const
-myFunc = (first: string, second: number) => {
-  console.log(`First: ${first}, Second: ${second}`);
-};
+// // eslint-disable-next-line prefer-const
+// myFunc = (first: string, second: number) => {
+//   console.log(`First: ${first}, Second: ${second}`);
+// };
 
-myFunc('Hello', 42);
+// myFunc('Hello', 42);
+
+// ============================================================
+
+
+
+// type UserWithCoords = {
+//   id: number;
+//   name: string;
+//   coords: Coordinate;
+// };
+
+// type Coordinate = [string, number];
+
+// const userWithCoords: UserWithCoords = {
+//   id: 123,
+//   name: 'Max',
+//   coords:[ 20,30]
+// };
+
+// console.log(userWithCoords);
+// ================================================================
+
+// enum AnimalIds {
+//   cat = 'cat',
+//     dog = 'dog',
+//     fish = 'fish',
+// }
+
+// type Animal = {
+//   [AnimalIds.cat]: {
+//     meow: () => string;
+//   };
+//   [AnimalIds.dog]: {
+//     bark: () => string;
+//   };
+//   [AnimalIds.fish]: {
+//     swim: () => void;
+//   };
+// };
+
+// const cat: Animal[AnimalIds.cat] = {
+//   meow: () => 'Hello I am cat!',
+// };
+
+
+// const  dog: Animal[AnimalIds.dog] = {
+//   bark: () => 'Woof! I am a dog',
+// };
+
+// const  fish: Animal[AnimalIds.fish] = {
+//   swim: () => undefined,
+// };
+
+// console.log(cat, dog, fish);
+// ===============================================================
+
+
+// const greet = (name?:string) => {
+//   if (name) {
+//     return `Hello ${name}`
+//   } else {
+//     return `No name`
+//   }
+// };
+
+// console.log(greet('Alice')); // Виводить: Hello, Alice!
+// console.log(greet()); // Виводить: Hello!
+
+// type Person = {
+//   name: string,
+//   age?: number,
+// }
+
+// const alice: Person = { name: 'Alice', age: 27 };
+// const bob: Person = { name: 'Bob' };
+
+// console.log(alice);
+//  console.log(bob);
+
+// =============================================================
