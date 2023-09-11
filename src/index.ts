@@ -432,3 +432,26 @@
 //  console.log(bob);
 
 // =============================================================
+
+
+type User = {
+  id: number;
+  name: string;
+  email: string;
+    registered: boolean;
+};
+
+function createUser(data: Partial<User>): User{
+    const defaultUser: User = {
+      id: Date.now(),
+      name: '',
+      email: '',
+      registered: false,
+    };
+
+    return { ...defaultUser,...data };
+}
+
+console.log(
+    createUser({ name: 'Alice', registered: true })
+);
